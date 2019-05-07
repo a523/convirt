@@ -1,0 +1,41 @@
+<body>
+<span style="font-size: 200%; font-family: serif; color:#0000FF;text-align: center">
+<center>$NAME</center>
+</span>
+<br/>
+
+<span style="font-size: 150%; font-family: serif; color:#0000FF;text-align: left">
+Provider:
+</span>
+<font color="black" size="2">
+$PROVIDER_STR
+</font>
+<br/>
+
+<span style="font-size: 150%; font-family: serif; color:#0000FF;text-align: left">
+Requirements:
+</span>
+<font color="black" >
+ConVirt v0.7+,  kvm-70, KVM Enabled host$EXTRA_REQUIREMENTS
+</font>
+<br/>
+
+<span style="font-size: 150%; font-family: serif; color:#0000FF;text-align: left">
+Description:
+</span>
+<font color="black" size="2">
+$DESCRIPTION
+</font>
+<br/>
+
+<span style="font-size: 150%; font-family: serif; color:#0000FF;text-align: left">
+Contact:
+</span>
+<font color="black" size="2">
+$APPLIANCE_CONTACT
+<br/>
+Visit <a href="http://www.convirture.com" target="_blank">ConVirt</a> for ConVirt related issues. We can be reached there via our user forums or email.
+</font>
+<br/>
+
+</body>

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- <xi:include href="master.html" /> -->
+
+<head>
+		<!-- ** CSS ** -->
+        <!-- base library -->
+        <link rel="stylesheet" type="text/css" href="${tg.url('/javascript/ext2.2.1/resources/css/ext-all.css')}" />
+        <!-- <link rel="stylesheet" type="text/css" href="${tg.url('/css/styles.css')}" />-->
+        <link rel="stylesheet" type="text/css" href="${tg.url('/css/overrides.css')}" />
+        <link rel="stylesheet" type="text/css" href="${tg.url('/css/tree_icons.css')}" />
+        <link rel="stylesheet" type="text/css" href="${tg.url('/css/header-styles.css')}" />
+
+   
+
+
+        <!-- ** Javascript ** -->
+        <!-- ExtJS library: base/adapter -->
+        <script type="text/javascript" src="${tg.url('/javascript/ext2.2.1/adapter/ext/ext-base.js')}"></script>
+        <!-- ExtJS library: all widgets -->
+        <script type="text/javascript" src="${tg.url('/javascript/ext2.2.1/ext-all.js')}"></script>
+        <!-- ExtJS Language Setup -->
+        <?python
+        lang_url = '/javascript/ext2.2.1/resources/locale/ext-lang-' + str(decide_js_lang()) + '.js'
+        lang_app = '/javascript/ext2.2.1/resources/locale/convirt-lang-' + str(decide_js_lang()) + '.js'
+        ?>
+
+
+        <script type="text/javascript" src="${tg.url(lang_url)}"></script>
+        <script type="text/javascript" src="${tg.url(lang_app)}"></script>
+        <script type="text/javascript" src="${tg.url('/javascript/i18n.js')}"></script>
+        <script type="text/javascript" src="${tg.url('/javascript/format.js')}"></script>
+
+        <script src="${tg.url('/javascript/ux/Ext.ux.PanelTitlePlugin.js')}" type="text/javascript"></script>
+
+        <link rel='stylesheet' type='text/css' href="${tg.url('/css/Multiselect.css')}" />
+        <script src="${tg.url('/javascript/util/DDView.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/Multiselect.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/uxvismode.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/PluginDetect.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/constants.js')}" type="text/javascript"></script>
+		<script src="${tg.url('/javascript/util/UIHelper.js')}" type="text/javascript"></script>
+		<script src="${tg.url('/javascript/util/ajax.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/credentials_form.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/credentialsForm.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/platforms.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/FileDialog.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/FileViewEditDialog.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/FileBrowser.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/window.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/util/parser.js')}" type="text/javascript"></script>
+		
+        <script src="${tg.url('/javascript/appliance/appliance_actions.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/appliance/ApplianceList.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/appliance/ImportApplianceDialog.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/appliance/ApplianceDetails.js')}" type="text/javascript"></script>
+
+		<script src="${tg.url('/javascript/network/VirtualNetworkDefinition.js')}" type="text/javascript"></script>
+		<script src="${tg.url('/javascript/network/VirtualNetwork.js')}" type="text/javascript"></script>
+        
+        <script src="${tg.url('/javascript/storage/StorageDefList.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/storage/StorageDefinition.js')}" type="text/javascript"></script>
+
+        <script src="${tg.url('/javascript/node/actions.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/dialogs.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/SPSelectionDialog.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/NodeSelectionDialog.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/MigrationChecksDialog.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/GroupProvisionSettingsDialog.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/Provision.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/BootImageSelection.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/VMConfigSettings.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/XenUI.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/KVMUI.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/node/annotate.js')}" type="text/javascript"></script>
+        
+        <script src="${tg.url('/javascript/dashboard/menu.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/dashboard/charts.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/dashboard/datacenter.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/dashboard/serverpool.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/dashboard/server.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/dashboard/vm.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/dashboard/dashboard.js')}" type="text/javascript"></script>
+		<script src="${tg.url('/javascript/dashboard/treenode.js')}" type="text/javascript"></script>
+		<script src="${tg.url('/javascript/dashboard/grid.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/dashboard/InfoGrid.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/dashboard/toolbar.js')}" type="text/javascript"></script>
+
+
+        <script src="${tg.url('/javascript/template/image_actions.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/template/template.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/template/templategroupinfo.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/template/TemplateForm.js')}" type="text/javascript"></script>
+        
+        <script src="${tg.url('/javascript/tasks/Tasks.js')}" type="text/javascript"></script>
+        
+        <script src="${tg.url('/javascript/model/accordion.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/model/User.js')}" type="text/javascript"></script>        
+        <script src="${tg.url('/javascript/model/Groups.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/model/Opsgroup.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/model/Operations.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/model/EntityType.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/model/profile.js')}" type="text/javascript"></script>       
+        
+        <link rel='stylesheet' type='text/css' href="${tg.url('/css/Ext.ux.grid.RowActions.css')}" />
+        <script src="${tg.url('/javascript/ux/Ext.ux.grid.RowActions.js')}" type="text/javascript"></script>
+
+        <!--[if IE]><script language="javascript" type="text/javascript" src="/javascript/flot/excanvas.r60.js"></script><![endif]-->
+        <!--<link rel='stylesheet' type='text/css' href="${tg.url('/css/Flot.css')}" />-->
+        <script src="${tg.url('/javascript/flot/jquery.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/flot/jquery.flot.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/flot/Flot.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/flot/basic.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/flot/PieFlot.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/flot/BarFlot.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/flot/GetText.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/flot/Flot.ja.js')}" type="text/javascript"></script>
+        <script src="${tg.url('/javascript/flot/jquery.flot.trunk.pie.js')}" type="text/javascript"></script>
+        
+        
+        <script type="text/javascript">
+            var user_name="$user_name";
+            var has_adv_priv="$has_adv_priv";
+            var is_admin="$is_admin";
+            var edition_string = "$edition_string";
+            var version = "$version";
+            var registered = "$registered";
+            var did = "$did";
+            var user_firstname="$user_firstname";
+            var TASKPANEREFRESH="$TASKPANEREFRESH";
+            var page_refresh_interval="$page_refresh_interval";
+        </script>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" py:replace="''"/>
+  <title >ConVirt 2.5</title>
+
+  <script type="text/javascript">
+        //alert(navigator.javaEnabled());        
+        var task_runner = new Ext.util.TaskRunner();
+        Ext.MessageBox.alert=function(title,msg){
+            if(msg==='SessionExpired.'){
+                task_runner.stopAll();
+                Ext.MessageBox.show({
+                    title : title,
+                    msg : _("Your session has expired. Please login again."),
+                    buttons : Ext.MessageBox.OK,
+                    fn : function(buttonId,text,opt){
+                        window.location="/user_logout"
+                    }
+                });
+            }else{
+                Ext.MessageBox.show({
+                    title : title,
+                    msg : msg,
+                    buttons : Ext.MessageBox.OK
+                });
+            }
+        };
+
+        // Path to the blank image should point to a valid location on your server
+        Ext.BLANK_IMAGE_URL = "${tg.url('/javascript/ext2.2.1/resources/images/default/s.gif')}";
+        Ext.QuickTips.init();
+        Ext.onReady(function() {
+            var registered = "$registered";
+            var outer=dashboardUI();
+            var viewport = new Ext.Viewport({
+                id:'convirt_panel'
+                ,layout:'border'
+                ,border:false
+                ,items:[{
+                    region:'center'
+                    ,border:false
+                    ,bodyStyle:'padding:3px;'
+                    ,items:[outer]
+                }]
+                ,listeners:{
+                    resize:function(){
+                        if(outer.rendered){
+                            outer.fireEvent('resize',outer);
+                        }
+                    }
+                }
+            });         
+        });
+
+</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

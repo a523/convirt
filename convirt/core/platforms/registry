@@ -1,0 +1,12 @@
+# File containing registry for various platforms
+# Python  syntax
+platforms = { 'xen': {'directory': 'xen',
+                      'name' : 'Xen'
+                     },
+              'kvm': {'directory': 'kvm',
+                      'name' : 'KVM'
+                     }
+            }
+
+
+

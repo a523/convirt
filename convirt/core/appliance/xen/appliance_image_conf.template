@@ -1,0 +1,6 @@
+# Location to create new disk VBDs
+VM_DISKS_DIR='/var/cache/convirt/vm_disks'
+
+# Location of conf file
+VM_CONF_DIR='/var/cache/convirt/vm_configs'
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- <xi:include href="master.html" /> -->
+
+<head>
+		<!-- ** CSS ** -->
+        <!-- base library -->
+         <link rel="stylesheet" type="text/css" href="${tg.url('/javascript/ext2.2.1/resources/css/ext-all.css')}" />
+        <!-- <link rel="stylesheet" type="text/css" href="${tg.url('/css/styles.css')}" />-->
+        <link rel="stylesheet" type="text/css" href="${tg.url('/css/overrides.css')}" />
+        <!-- ** Javascript ** -->
+        <!-- ExtJS library: base/adapter -->
+        <script type="text/javascript" src="${tg.url('/javascript/ext2.2.1/adapter/ext/ext-base.js')}"></script>
+        <!-- ExtJS library: all widgets -->
+        <script type="text/javascript" src="${tg.url('/javascript/ext2.2.1/ext-all.js')}"></script>
+        <!-- ExtJS Language Setup -->
+        <?python
+        lang_url = '/javascript/ext2.2.1/resources/locale/ext-lang-' + str(decide_js_lang()) + '.js'
+        lang_app = '/javascript/ext2.2.1/resources/locale/convirt-lang-' + str(decide_js_lang()) + '.js'
+        ?>
+
+        <script type="text/javascript" src="${tg.url(lang_url)}"></script>
+        <script type="text/javascript" src="${tg.url(lang_app)}"></script>
+        <script type="text/javascript" src="${tg.url('/javascript/i18n.js')}"></script>
+        <script type="text/javascript" src="${tg.url('/javascript/format.js')}"></script>
+        
+        <script src="${tg.url('/javascript/login.js')}" type="text/javascript"></script>
+        
+
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" py:replace="''"/>
+  <title>ConVirt 2.5</title>
+
+  <script type="text/javascript">
+        // Path to the blank image should point to a valid location on your server
+        Ext.BLANK_IMAGE_URL = "${tg.url('/javascript/ext2.2.1/resources/images/default/s.gif')}";
+
+        Ext.onReady(function(){
+        	loginconfig();
+		}); //end onReady
+
+</script>
+
+</head>
+<body bgcolor="#E0EAEA">
+
+    <table style="width:100px;" align="center" bgcolor="">
+            <td bgcolor="99FFFF"><div id="content"  style="margin:5 0 0 5;width:100%;"></div></td>
+    </table>
+
+</body>
+</html>

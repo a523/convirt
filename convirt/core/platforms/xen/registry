@@ -1,0 +1,15 @@
+# ui_config -- required for doing appropriate UI integration
+# web_config -- future.
+
+config = { 'platform_module': 'convirt.core.platforms.xen.XenPlatform',
+           'platform_class' : 'XenPlatform',
+         }
+
+# helpers in client for now.
+ui_config = { 'ui_helper_module' : 'convirt.client.XenUI',
+              'ui_helper_class' : 'XenUIHelper',
+            }
+
+web_config = { 'web_helper_module' : 'convirt.viewModel.XenWebHelper',
+              'web_helper_class' : 'XenWebHelper',
+            }

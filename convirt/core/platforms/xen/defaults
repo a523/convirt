@@ -1,0 +1,4 @@
+default_migration_port = 8002
+default_xen_port = 8006
+default_xen_protocol = "tcp"
+

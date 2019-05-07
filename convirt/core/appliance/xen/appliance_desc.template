@@ -1,0 +1,32 @@
+<body>
+<span style="font-size: 200%; font-family: serif; color:#0000FF;text-align: center">
+$NAME
+</span>
+<br/>
+
+<br/>
+<span style="font-size: 125%; font-family: serif; color:#0000FF;text-align: left">
+Provider:
+</span>
+$PROVIDER_STR
+<br/>
+<span style="font-size: 125%; font-family: serif; color:#0000FF;text-align: left">
+Requirements:
+</span>
+ConVirt v0.7+,  Xen v3.1+, Xen Enabled host$EXTRA_REQUIREMENTS 
+
+
+<br/>
+<span style="font-size: 125%; font-family: serif; color:#0000FF;text-align: left">
+Description:
+</span>
+$DESCRIPTION
+<br/>
+
+<span style="font-size: 125%; font-family: serif; color:#0000FF;text-align: left">
+Contact:
+</span>
+<br/>
+$APPLIANCE_CONTACT
+Visit <a href="http://www.convirture.com">ConVirt</a> for ConVirt related issues. We can be reached there via our user forums or email.
+</body>

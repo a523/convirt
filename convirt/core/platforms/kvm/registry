@@ -1,0 +1,15 @@
+# ui_config -- required for doing appropriate UI integration
+# web_config -- future.
+
+config = { 'platform_module': 'convirt.core.platforms.kvm.KVMPlatform',
+           'platform_class' : 'KVMPlatform',
+         }
+
+# helpers in client for now.
+ui_config = { 'ui_helper_module' : 'convirt.client.KVMUI',
+              'ui_helper_class' : 'KVMUIHelper',
+            }
+
+web_config = { 'web_helper_module' : 'convirt.viewModel.KVMWebHelper',
+              'web_helper_class' : 'KVMWebHelper',
+            }

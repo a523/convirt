@@ -1,0 +1,23 @@
+# Translations template for convirt.
+# Copyright (C) 2009 ORGANIZATION
+# This file is distributed under the same license as the convirt project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: convirt 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2009-10-09 21:38-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.4\n"
+
+#: convirt/public/javascript/dashboard.js:10
+msgid "User"
+msgstr ""
+
